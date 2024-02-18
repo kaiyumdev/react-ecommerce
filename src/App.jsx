@@ -1,9 +1,12 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
+import NavItems from "./components/NavItems";
 
 function App() {
   return (
     <>
-      <h1 className="text-primary">Hello, React Developers</h1>
+      <NavItems></NavItems>
+      <Outlet></Outlet>
     </>
   );
 }
