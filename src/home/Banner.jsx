@@ -51,14 +51,14 @@ const Banner = () => {
             </button>
           </form>
           <p>{desc}</p>
-          <div className="lab-ul">
+          <ul className="lab-ul">
             {searchInput &&
               filteredProducts.map((product, i) => (
                 <li key={i}>
                   <Link to={`/shop/${product.id}`}>{product.name}</Link>
                 </li>
               ))}
-          </div>
+          </ul>
         </div>
       </div>
     </div>
