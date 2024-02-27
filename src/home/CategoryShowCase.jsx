@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Rating from "../components/Rating";
 
 const title = "Our Products";
 
@@ -104,6 +106,58 @@ const CategoryShowCase = () => {
               <li onClick={() => filterItem("Phones")}>Phones</li>
               <li onClick={() => filterItem("Beauty")}>Beauty</li>
             </ul>
+          </div>
+        </div>
+
+        {/* section body */}
+        <div className="section-wrapper">
+          <div className="row g-4 justify-content-center row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 course-filter">
+            {items.map((elem) => {
+              const {
+                id,
+                imgUrl,
+                imgAlt,
+                cate,
+                title,
+                brand,
+                authorName,
+                price,
+              } = elem;
+              return (
+                <div className="col" key={id}>
+                  <div className="course-item style-4">
+                    <div className="course-inner">
+                      <div className="course-thumb">
+                        <img src={imgUrl} alt="" />
+                        <div className="course-category">
+                          <div className="course-cate">
+                            <a href="#">{cate}</a>
+                          </div>
+                          <div className="course-reiew">
+                            <Rating />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* content  */}
+                      <div className="course-content">
+                        <Link to="/course-single">
+                          <h5>{title}</h5>
+                        </Link>
+                        <div className="course-footer">
+                          <div className="course-author">
+                            <Link to="/team-single" className="ca-name">
+                              {brand}
+                            </Link>
+                          </div>
+                          <div className="course-price">{price}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
