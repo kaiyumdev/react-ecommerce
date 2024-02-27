@@ -52,7 +52,7 @@ const HomeCategory = () => {
           <span className="subtitle">{subTitle}</span>
           <h2 className="title">{title}</h2>
         </div>
-        {/* section header */}
+        {/* section card */}
         <div className="section-wrapper">
           <div className="row g-4 justify-content-center row-cols-md-3 row-cols-sm-2 row-cols-1">
             {categoryList.map((val, i) => (
@@ -68,7 +68,7 @@ const HomeCategory = () => {
                       <div className="cate-icon">
                         <i className={val.iconName}></i>
                       </div>
-                      <Link>
+                      <Link to="/shop">
                         <h6>{val.title}</h6>
                       </Link>
                     </div>
@@ -77,6 +77,11 @@ const HomeCategory = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="text-center mt-5">
+          <Link to="/shop" className="lab-btn">
+            <span>{btnText}</span>
+          </Link>
         </div>
       </div>
     </div>
