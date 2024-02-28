@@ -79,6 +79,7 @@ const ProductData = [
   },
 ];
 
+//create CategoryShowCase
 const CategoryShowCase = () => {
   const [items, setItems] = useState(ProductData);
   const filterItem = (categItem) => {
