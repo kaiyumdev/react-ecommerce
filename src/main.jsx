@@ -15,6 +15,7 @@ import "././assets/css/animate.css";
 import "././assets/css/style.min.css";
 import Home from "./home/Home";
 import Blog from "./blog/Blog";
+import Shop from "./shop/Shop";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/shop",
+        element: <Shop></Shop>,
       },
     ],
   },

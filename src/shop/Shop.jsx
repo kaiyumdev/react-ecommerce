@@ -1,12 +1,12 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
 
-const Blog = () => {
+const Shop = () => {
   return (
     <div>
-      <PageHeader title="Blog Page" curPage="Blogs"></PageHeader>
+      <PageHeader title={"Our Shop Pages"} curPage={"Shop"}></PageHeader>
     </div>
   );
 };
 
-export default Blog;
+export default Shop;
