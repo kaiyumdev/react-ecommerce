@@ -16,6 +16,7 @@ import "././assets/css/style.min.css";
 import Home from "./home/Home";
 import Blog from "./blog/Blog";
 import Shop from "./shop/Shop";
+import SingleProduct from "./shop/SingleProduct";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>,
+      },
+      {
+        path: "shop/:id",
+        element: <SingleProduct></SingleProduct>,
       },
     ],
   },
