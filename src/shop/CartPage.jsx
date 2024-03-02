@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import delImgUrl from "../assets/images/shop/del.png";
 // import CheckoutPage from "./CheckoutPage";
 import PageHeader from "../components/PageHeader";
+import CheckoutPage from "./CheckOutPage";
 
 const CartPage = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -143,8 +144,12 @@ const CartPage = () => {
                 </form>
                 <form className="cart-checkout" action="/">
                   <input type="submit" value="Update Cart" />
-                  {/* <Link to="/check-out"><input type="submit" value="Proceed to Checkout" /></Link> */}
-                  <div>{/* <CheckoutPage /> */}</div>
+                  <Link to="/check-out">
+                    <input type="submit" value="Proceed to Checkout" />
+                  </Link>
+                  <div>
+                    <CheckoutPage />
+                  </div>
                 </form>
               </div>
 
