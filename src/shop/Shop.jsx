@@ -69,7 +69,7 @@ const Shop = () => {
             </div>
             <div className="col-lg-4 col-12">
               <aside>
-                <Search GridList={GridList} products={currentProducts}></Search>
+                <Search GridList={GridList} products={products}></Search>
               </aside>
             </div>
           </div>
