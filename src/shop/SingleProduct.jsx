@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import PopularPost from "./PopularPost";
 import Tags from "./Tags";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,6 +13,7 @@ import { Autoplay } from "swiper/modules";
 import ProductDisplay from "./ProductDisplay";
 import PageHeader from "../components/PageHeader";
 import Review from "./Review";
+import MostPopularPost from "./MostPopularPost";
 const reviwtitle = "Add a Review";
 
 const SingleProduct = () => {
@@ -89,8 +89,8 @@ const SingleProduct = () => {
             </div>
             <div className="col-lg-4 col-md-7 col-12">
               <aside className="ps-lg-4">
-                {/* <MostPopularPost />
-                <Tags /> */}
+                <MostPopularPost />
+                <Tags />
               </aside>
             </div>
           </div>
