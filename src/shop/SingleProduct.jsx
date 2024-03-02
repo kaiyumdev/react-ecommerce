@@ -13,6 +13,7 @@ import { Autoplay } from "swiper/modules";
 // import MostPopularPost from "../../components/Sidebar/MostPopularPost";
 import ProductDisplay from "./ProductDisplay";
 import PageHeader from "../components/PageHeader";
+import Review from "./Review";
 const reviwtitle = "Add a Review";
 
 const SingleProduct = () => {
@@ -81,7 +82,9 @@ const SingleProduct = () => {
                   </div>
                 </div>
 
-                <div className="review">{/* <Review /> */}</div>
+                <div className="review">
+                  <Review />
+                </div>
               </article>
             </div>
             <div className="col-lg-4 col-md-7 col-12">
