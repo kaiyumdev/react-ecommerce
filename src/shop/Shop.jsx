@@ -1,9 +1,11 @@
+/* eslint-disable no-undef */
 import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
 import Data from "../products.json";
 import ProductCards from "./ProductCards";
 import Pagination from "./Pagination";
 import Search from "./Search";
+import ShopCategory from "./ShopCategory";
 
 const showResults = "Showing 01 - 12 of 139 Results";
 
@@ -27,6 +29,19 @@ const Shop = () => {
     seTCurrentPage(pageNumber);
   };
 
+  //filter products based on category
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  // category based filtering
+  const menuItems = [...new Set(Data.map((Val) => Val.category))];
+
+  const filterItem = (curcat) => {
+    const newItem = Data.filter((newVal) => {
+      return newVal.category === curcat;
+    });
+    setSelectedCategory(curcat);
+    setProducts(newItem);
+    // console.log(selectedCategory)
+  };
   return (
     <div>
       <PageHeader title={"Our Shop Pages"} curPage={"Shop"}></PageHeader>
@@ -70,6 +85,13 @@ const Shop = () => {
             <div className="col-lg-4 col-12">
               <aside>
                 <Search GridList={GridList} products={products}></Search>
+                <ShopCategory
+                  filterItem={filterItem}
+                  setItem={setProducts}
+                  menuItems={menuItems}
+                  setProducts={setProducts}
+                  selectedCategory={selectedCategory}
+                ></ShopCategory>
               </aside>
             </div>
           </div>
