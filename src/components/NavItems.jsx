@@ -34,7 +34,7 @@ const NavItems = () => {
           </div>
         </div>
       </div>
-      {/* header bottom */}
+      {/* header bottom start */}
       <div className="header-bottom">
         <div className="container">
           <div className="header-wrapper">
