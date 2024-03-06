@@ -27,6 +27,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Signup from "./components/Signup";
 import CheckoutPage from "./shop/CheckOutPage";
 
+//routes
 const router = createBrowserRouter([
   {
     path: "/",
