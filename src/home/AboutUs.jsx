@@ -27,6 +27,7 @@ const countList = [
 
 const AboutUs = () => {
   return (
+    //about section
     <div className="instructor-section style-2 padding-tb section-bg-ash">
       <div className="container">
         <div className="section-wrapper">
