@@ -63,7 +63,7 @@ const HomeCategory = () => {
                     <div className="category-thumb">
                       <img src={val.imgUrl} alt="" />
                     </div>
-                    {/* content */}
+                    {/*category content */}
                     <div className="category-content">
                       <div className="cate-icon">
                         <i className={val.iconName}></i>
