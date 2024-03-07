@@ -97,7 +97,7 @@ const CategoryShowCase = () => {
         <img src="/src/assets/images/shape-img/icon/02.png" alt="education" />
       </div>
       <div className="container">
-        {/* section header */}
+        {/*category section header */}
         <div className="section-header">
           <h2 className="title">{title}</h2>
           <div className="course-filter-group">
