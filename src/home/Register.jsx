@@ -11,6 +11,7 @@ const btnText = "Register Now";
 
 const Register = () => {
   return (
+    //register section
     <section className="register-section padding-tb pb-0">
       <div className="container">
         <div className="row g-4 row-cols-lg-2 row-cols-1 align-items-center">
