@@ -47,6 +47,7 @@ const clientsList = [
 ];
 const LocationSprade = () => {
   return (
+    //location section
     <div className="clients-section style-2 padding-tb">
       <div className="container">
         <div className="section-header text-center">
