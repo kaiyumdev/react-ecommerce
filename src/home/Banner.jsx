@@ -20,7 +20,7 @@ const Banner = () => {
   const [filteredProducts, setFilteredProducts] = useState(productData);
   console.log(productData);
 
-  //search functionality
+  //search functionality here
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
     setSearchInput(searchTerm);
