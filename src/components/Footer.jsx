@@ -148,6 +148,7 @@ const footerbottomList = [
 
 const Footer = () => {
   return (
+    //footer section
     <footer className="style-2">
       <div className="footer-top dark-view padding-tb">
         <div className="container">
