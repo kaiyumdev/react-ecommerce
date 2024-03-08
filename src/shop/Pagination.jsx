@@ -15,6 +15,7 @@ const Pagination = ({
   }
 
   return (
+    //pagination page
     <ul className="default-pagination lab-ul">
       <li>
         <a
