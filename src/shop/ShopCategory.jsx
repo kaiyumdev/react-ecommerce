@@ -10,6 +10,7 @@ const ShopCategory = ({
   selectedCategory,
 }) => {
   return (
+    //shopCategory section
     <>
       <div className="widget-header">
         <h5 className="ms-2">{title}</h5>
