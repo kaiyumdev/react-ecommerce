@@ -6,7 +6,7 @@ import Rating from "../components/Rating";
 const ProductCards = ({ products, GridList }) => {
   // console.log(products.map(val => console.log(val.id)))
   return (
-    //shop section
+    //Product cards page
     <div
       className={`shop-product-wrap row justify-content-center ${
         GridList ? "grid" : "list"
