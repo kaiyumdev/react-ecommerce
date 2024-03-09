@@ -5,6 +5,7 @@ import blogList from "../utilis/blogdata";
 import PageHeader from "../components/PageHeader";
 
 const Blog = () => {
+  //blogPage section
   return (
     <div>
       <PageHeader title={"Our Blog Posts"} curPage={"Blog"} />
