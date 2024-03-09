@@ -35,6 +35,7 @@ const postList = [
 
 const PopularPost = () => {
   return (
+    //popular posts section
     <div className="widget widget-post">
       <div className="widget-header">
         <h5 className="title">{title}</h5>
