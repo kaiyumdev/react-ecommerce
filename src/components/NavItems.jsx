@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo/logo.png";
+import { AuthContext } from "../context/AuthProvider";
+import { signOut } from "firebase/auth";
 
 const NavItems = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [socialToggle, setSocialToggle] = useState(false);
   const [headerFixed, setHeaderFixed] = useState(false);
+
+  const { user } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    signOut(user.auth)
+      .then(() => {})
+      .catch(() => {});
+  };
 
   //addEventListener
   window.addEventListener("scroll", () => {
@@ -71,9 +81,18 @@ const NavItems = () => {
               <Link to="/sign-up" className="lab-btn me-3 d-none d-md-block">
                 Create Account
               </Link>
-              <Link to="/login" className="d-none d-md-block">
+              {/* <Link to="/login" className="d-none d-md-block">
                 Log In
-              </Link>
+              </Link> */}
+              {user?.uid ? (
+                <>
+                  <Link to="/" onClick={handleSignOut}>
+                    SignOut
+                  </Link>
+                </>
+              ) : (
+                <Link to="/login">Login</Link>
+              )}
 
               {/* menu togglar */}
               <div
