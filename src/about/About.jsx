@@ -31,6 +31,7 @@ const aboutList = [
 
 const About = () => {
   return (
+    //about page
     <div>
       <PageHeader title={"About Our Brand"} curPage={"About"} />
       <div className="about-section style-3 padding-tb section-bg">
