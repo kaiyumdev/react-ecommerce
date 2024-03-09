@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const CheckoutPage = () => {
+  //checkoutPage section
   const [show, setShow] = useState(false);
   const [activeTab, setActiveTab] = useState("visa"); // Initial active tab
 
