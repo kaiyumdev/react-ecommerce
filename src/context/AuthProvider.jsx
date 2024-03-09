@@ -20,6 +20,7 @@ const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
+  //authProvider page
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
