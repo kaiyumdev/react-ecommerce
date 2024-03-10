@@ -39,7 +39,7 @@ const blogList = [
   },
   {
     id: 3,
-    imgUrl: "../../public/images/blog/03.jpg",
+    imgUrl: "/images/blog/03.jpg",
     imgAlt: "Blog Thumb",
     title: "Consulting Reporting Qounc Arei Could More.",
     desc: "Pluoresnts customize prancing apcentered customer service anding ands asing straelg Interacvely cordinate performe",
