@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import delImgUrl from "../assets/images/shop/del.png";
+import delImgUrl from "../../public/images/shop/del.png";
 // import CheckoutPage from "./CheckoutPage";
 import PageHeader from "../components/PageHeader";
 import CheckoutPage from "./CheckOutPage";
