@@ -39,10 +39,10 @@ const About = () => {
             <div className="col">
               <div className="about-left">
                 <div className="about-thumb">
-                  <img src="/src/assets/images/about/01.jpg" alt="about" />
+                  <img src="/images/about/01.jpg" alt="about" />
                 </div>
                 <div className="abs-thumb">
-                  <img src="/src/assets/images/about/02.jpg" alt="about" />
+                  <img src="/images/about/02.jpg" alt="about" />
                 </div>
                 <div className="about-left-content">
                   <h3>{year}</h3>

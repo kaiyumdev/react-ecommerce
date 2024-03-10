@@ -55,13 +55,13 @@ const LocationSprade = () => {
         </div>
         <div className="section-wrapper">
           <div className="clients">
-            {clientsList.map((val, i) => (
+            {clientsList?.map((val, i) => (
               <div className="client-list" key={i}>
                 <Link to="/signup" className="client-content">
                   <span>{val.text}</span>
                 </Link>
                 <div className="client-thumb">
-                  <img src={`${val.imgUrl}`} alt={`${val.imgAlt}`} />
+                  <img src={`${val?.imgUrl}`} alt={`${val.imgAlt}`} />
                 </div>
               </div>
             ))}

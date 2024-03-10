@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../public/images/logo/logo.png";
+import logo from "/images/logo/logo.png";
 import { AuthContext } from "../context/AuthProvider";
 import { signOut } from "firebase/auth";
 
