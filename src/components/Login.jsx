@@ -65,7 +65,6 @@ const Login = () => {
       .then((result) => {
         // Signed in
         const user = result.user;
-        console.log(user);
         alert("Login successful!");
         navigate(from, { replace: true });
         // ...
