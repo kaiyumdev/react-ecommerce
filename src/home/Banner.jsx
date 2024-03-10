@@ -18,6 +18,8 @@ const bannerList = [
 const Banner = () => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(productData);
+  console.log(productData);
+
   //search functionality
   const handleSearch = (e) => {
     const searchTerm = e.target.value;
