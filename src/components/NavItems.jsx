@@ -13,8 +13,8 @@ const NavItems = () => {
 
   const handleSignOut = () => {
     signOut(user.auth)
-      .then(() => {})
-      .catch(() => {});
+      .then(() => { })
+      .catch(() => { });
   };
 
   //addEventListener
@@ -25,11 +25,11 @@ const NavItems = () => {
       setHeaderFixed(false);
     }
   });
+
   return (
     <header
-      className={`header-section style-4 ${
-        headerFixed ? "header-fixed fadeInUp" : ""
-      }  `}
+      className={`header-section style-4 ${headerFixed ? "header-fixed fadeInUp" : ""
+        }  `}
     >
       {/* header top start */}
       <div className={`header-top d-md-none ${socialToggle ? "open" : ""}`}>
