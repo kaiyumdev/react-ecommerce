@@ -153,20 +153,6 @@ const SingleBlog = () => {
                                   that never was greater artst
                                 </p>
 
-                                <div className="video-thumb">
-                                  <img
-                                    src="/images/blog/single/02.jpg"
-                                    alt="video"
-                                  />
-                                  <a
-                                    href="https://youtu.be/2qWo6W5Wn8Q"
-                                    className="video-button popup"
-                                    target="_blank"
-                                  >
-                                    <i className="icofont-ui-play"></i>
-                                  </a>
-                                </div>
-
                                 <p>
                                   whole heart create am alones and feel the
                                   charm of exstenceth spot whch the blissouls
