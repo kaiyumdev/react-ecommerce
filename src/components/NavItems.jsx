@@ -19,12 +19,13 @@ const NavItems = () => {
 
   //addEventListener
   window.addEventListener("scroll", () => {
-    if (window.screenY > 200) {
+    if (window.scrollY > 200) {
       setHeaderFixed(true);
     } else {
       setHeaderFixed(false);
     }
   });
+
 
   return (
     <header
