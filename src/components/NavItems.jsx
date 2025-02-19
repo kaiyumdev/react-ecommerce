@@ -83,16 +83,18 @@ const NavItems = () => {
                   <li>
                     <Link to="/contact">Contact</Link>
                   </li>
-                  <li className="nav-item position-relative">
-                    <Link to="/cart-page" className="nav-link position-relative d-flex align-items-center">
-                      <i className="icofont-cart fs-3 text-dark"></i>
-                      {cartItems?.length > 0 && (
-                        <span className="top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                          {cartItems.length}
-                        </span>
-                      )}
-                    </Link>
-                  </li>
+                  {
+                    user && <li className="nav-item position-relative">
+                      <Link to="/cart-page" className="nav-link position-relative d-flex align-items-center">
+                        <i className="icofont-cart fs-3 text-dark"></i>
+                        {cartItems?.length > 0 && (
+                          <span className="top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            {cartItems.length}
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  }
                 </ul>
               </div>
               {/* sign in & login in */}
