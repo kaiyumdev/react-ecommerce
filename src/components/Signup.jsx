@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
+import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const title = "Register Now";
 const socialTitle = "Register With Social Media";
@@ -133,29 +134,14 @@ const Signup = () => {
               <h5 className="subtitle">{socialTitle}</h5>
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
-                  <button onClick={handleRegister} className="github">
-                    <i className="icofont-github"></i>
-                  </button>
+                  <Link to="/" onClick={handleRegister} className="instagram">
+                    <FaGoogle />
+                  </Link>
                 </li>
                 <li>
-                  <a href="/" className="facebook">
-                    <i className="icofont-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="twitter">
-                    <i className="icofont-twitter"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="linkedin">
-                    <i className="icofont-linkedin"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="/" className="instagram">
-                    <i className="icofont-instagram"></i>
-                  </a>
+                  <Link to="/" className="facebook">
+                    <FaGithub />
+                  </Link>
                 </li>
               </ul>
             </div>
