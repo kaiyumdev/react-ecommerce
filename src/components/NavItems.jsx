@@ -76,6 +76,9 @@ const NavItems = () => {
                   <li>
                     <Link to="/contact">Contact</Link>
                   </li>
+                  <li>
+                    <Link to="/cart-page">Cart</Link>
+                  </li>
                 </ul>
               </div>
               {/* sign in & login in */}
