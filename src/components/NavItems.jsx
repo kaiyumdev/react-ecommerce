@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "/images/logo/logo.png";
 import { AuthContext } from "../context/AuthProvider";
@@ -8,6 +8,13 @@ const NavItems = () => {
   const [menuToggle, setMenuToggle] = useState(false);
   const [socialToggle, setSocialToggle] = useState(false);
   const [headerFixed, setHeaderFixed] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    // Fetch cart items from local storage
+    const storedCartItems = JSON.parse(localStorage.getItem("cart")) || [];
+    setCartItems(storedCartItems);
+  }, []);
 
   const { user } = useContext(AuthContext);
 
@@ -76,8 +83,15 @@ const NavItems = () => {
                   <li>
                     <Link to="/contact">Contact</Link>
                   </li>
-                  <li>
-                    <Link to="/cart-page">Cart</Link>
+                  <li className="nav-item position-relative">
+                    <Link to="/cart-page" className="nav-link position-relative d-flex align-items-center">
+                      <i className="icofont-cart fs-3 text-dark"></i>
+                      {cartItems?.length > 0 && (
+                        <span className="top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          {cartItems.length}
+                        </span>
+                      )}
+                    </Link>
                   </li>
                 </ul>
               </div>
