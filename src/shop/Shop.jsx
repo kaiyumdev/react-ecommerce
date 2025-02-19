@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PageHeader from "../components/PageHeader";
-import Data from "../products.json";
+import Data from "/public/products";
 import ProductCards from "./ProductCards";
 import Pagination from "./Pagination";
 import Search from "./Search";
@@ -13,7 +13,14 @@ const showResults = "Showing 01 - 12 of 139 Results";
 
 const Shop = () => {
   const [GridList, setGridList] = useState(true);
-  const [products, setProducts] = useState(Data);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    fetch("/products.json") // Fetch from public folder
+      .then((response) => response.json())
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error loading JSON:", error));
+  }, []);
 
   //pagination
   const [currentPage, seTCurrentPage] = useState(1);
@@ -57,9 +64,8 @@ const Shop = () => {
                 <div className="shop-title d-flex flex-wrap justify-content-between">
                   <p>{showResults}</p>
                   <div
-                    className={`product-view-mood ${
-                      GridList ? "gridActive" : "listActive"
-                    }`}
+                    className={`product-view-mood ${GridList ? "gridActive" : "listActive"
+                      }`}
                   >
                     <a className="grid" onClick={() => setGridList(!GridList)}>
                       <i className="icofont-ghost"></i>
