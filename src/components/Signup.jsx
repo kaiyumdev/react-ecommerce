@@ -38,7 +38,7 @@ let socialList = [
 const Signup = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
-  const { signUpWithGmail, createUser } = useContext(AuthContext);
+  const { signUpWithGmail, createUser, signUpWithGithub } = useContext(AuthContext);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -46,8 +46,9 @@ const Signup = () => {
   const from = location.state?.from?.pathname || "/";
 
   // login with google
-  const handleRegister = () => {
-    signUpWithGmail()
+  const handleRegister = (provider) => {
+    // signUpWithGmail()
+    provider()
       .then((result) => {
         const user = result.user;
         navigate(from, { replace: true });
@@ -134,13 +135,13 @@ const Signup = () => {
               <h5 className="subtitle">{socialTitle}</h5>
               <ul className="lab-ul social-icons justify-content-center">
                 <li>
-                  <Link to="/" onClick={handleRegister} className="instagram">
+                  <Link onClick={() => handleRegister(signUpWithGmail)} className="instagram">
                     <FaGoogle />
                   </Link>
                 </li>
                 <li>
-                  <Link to="/" className="facebook">
-                    <FaGithub />
+                  <Link className="facebook">
+                    <FaGithub onClick={() => handleRegister(signUpWithGithub)} />
                   </Link>
                 </li>
               </ul>
