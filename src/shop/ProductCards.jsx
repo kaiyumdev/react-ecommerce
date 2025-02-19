@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 
 const ProductCards = ({ products, GridList }) => {
-  // console.log(products.map(val => console.log(val.id)))
+  console.log(products.map(val => console.log(val)))
   return (
     <div
-      className={`shop-product-wrap row justify-content-center ${
-        GridList ? "grid" : "list"
-      }`}
+      className={`shop-product-wrap row justify-content-center ${GridList ? "grid" : "list"
+        }`}
     >
-      {products.map((product, i) => (
+      {products?.map((product, i) => (
         <div className="col-lg-4 col-md-6 col-12" key={i}>
           <div className="product-item">
             <div className="product-thumb">
@@ -19,7 +18,7 @@ const ProductCards = ({ products, GridList }) => {
                 <img src={`${product.img}`} alt={`${product.img}`} />
               </div>
               <div className="product-action-link">
-                <Link to={`/shop/${product.id}`}>
+                <Link to={`/shop/${product?.id}`}>
                   <i className="icofont-eye"></i>
                 </Link>
                 <a href="#">
